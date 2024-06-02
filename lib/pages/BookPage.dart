@@ -16,7 +16,10 @@ class BookPage extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(25),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(25),
+                topRight: Radius.circular(25),
+              ),
             ),
             padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: ListView(
@@ -97,16 +100,20 @@ class BookPage extends StatelessWidget {
                           SizedBox(
                             height: 15,
                           ),
-                          Container(
-                            // color: Colors.grey,
-                            alignment: Alignment.centerLeft,
-                            width: 360,
-                            child: Text(
-                              'Dan Brown',
-                              style: TextStyle(
-                                fontFamily: 'Rale',
-                                fontSize: 18,
-                                fontWeight: FontWeight.w500,
+                          GestureDetector(
+                            onTap: () =>
+                                Navigator.pushNamed(context, '/Auteur'),
+                            child: Container(
+                              // color: Colors.grey,
+                              alignment: Alignment.centerLeft,
+                              width: 360,
+                              child: Text(
+                                'Dan Brown',
+                                style: TextStyle(
+                                  fontFamily: 'Rale',
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
                           ),
@@ -166,6 +173,9 @@ class BookPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8),
                               color: Colors.green,
                             ),
+                          ),
+                          SizedBox(
+                            height: 60,
                           ),
                         ],
                       ),

@@ -1,3 +1,4 @@
+import 'package:bazar/pages/Livraison.dart';
 import 'package:flutter/material.dart';
 import 'package:bazar/pages/Categories.dart';
 import 'package:bazar/pages/CreateAccount.dart';
@@ -16,6 +17,7 @@ import 'package:bazar/pages/welcoome2.dart';
 import 'package:bazar/pages/Aide.dart';
 import 'package:bazar/pages/welcome.dart';
 import 'package:bazar/pages/AdminPage.dart';
+import 'package:bazar/pages/UnExemplaire.dart';
 import 'package:bazar/pages/Auteur.dart';
 
 void main() {
@@ -47,9 +49,9 @@ class MyApp extends StatelessWidget {
         "/Favorites": (context) => Favorites(),
         "/Aide": (context) => Aide(),
         "/AdminPage": (context) => AdminPage(),
-        "/Auteur": (context) => Auteur()
-        // "/Commande": (context) => Commande(),
-        // "UnExemplaire": ((context) => UnExemplaire()),
+        "/Auteur": (context) => Auteur(),
+        "/UnExemplaire": ((context) => UnExemplaire()),
+        "/Livraison": (context) => Livraison(),
         // "/Proposition": (context) => Proposition(),
         // "VendeurPage": (context) => VendeurPage(),
       },

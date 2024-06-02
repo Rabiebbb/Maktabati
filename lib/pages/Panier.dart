@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:bazar/pages/Livraison.dart';
 
 class Panier extends StatefulWidget {
   const Panier({super.key});
@@ -171,7 +172,14 @@ class _PanierState extends State<Panier> {
         child: Center(
           child: TextButton(
             onPressed: () {
-              null;
+              showModalBottomSheet(
+                isScrollControlled: true,
+                backgroundColor: Colors.transparent,
+                context: context,
+                builder: (BuildContext context) {
+                  return Livraison();
+                },
+              );
             },
             child: Text(
               'Commande',

@@ -96,7 +96,7 @@ class Welcome extends StatelessWidget {
                       child: ElevatedButton(
                         onPressed: () {
                           // Navigator.pushNamed(context, "/welcoome2");
-                          Navigator.pushNamed(context, "/Auteur");
+                          Navigator.pushNamed(context, "/Livraison");
                         },
                         child: Text(
                           'Continuer',

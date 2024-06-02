@@ -23,11 +23,12 @@ class Auteur extends StatelessWidget {
                     width: 100,
                     height: 100,
                     decoration: BoxDecoration(
-                        color: Colors.green.shade200,
+                        color: Colors.green,
                         borderRadius: BorderRadius.circular(500)),
                     child: Icon(
                       Icons.person,
                       size: 60,
+                      color: Colors.white,
                     ),
                   ),
                   SizedBox(
