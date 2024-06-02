@@ -303,45 +303,48 @@ class Profil extends StatelessWidget {
                         SizedBox(
                           height: 5,
                         ),
-                        Container(
-                          padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
-                          width: 2000,
-                          height: 80,
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 60,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 213, 255, 215),
-                                  borderRadius: BorderRadius.circular(
-                                      80.0), // Adjust the radius here
-                                ),
-                                child: Icon(
-                                  Icons.chat,
-                                  size: 30,
-                                  color: Colors.green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Container(
-                                // color: Colors.green.shade200,
-                                // width: 115,
-                                alignment: Alignment.centerLeft,
-                                child: GestureDetector(
-                                  child: Text(
-                                    'Aide',
-                                    style: TextStyle(
-                                        fontFamily: 'Cream',
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black),
+                        GestureDetector(
+                          onTap: () => Navigator.pushNamed(context, '/Aide'),
+                          child: Container(
+                            padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
+                            width: 2000,
+                            height: 80,
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 213, 255, 215),
+                                    borderRadius: BorderRadius.circular(
+                                        80.0), // Adjust the radius here
+                                  ),
+                                  child: Icon(
+                                    Icons.chat,
+                                    size: 30,
+                                    color: Colors.green,
                                   ),
                                 ),
-                              ),
-                            ],
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Container(
+                                  // color: Colors.green.shade200,
+                                  // width: 115,
+                                  alignment: Alignment.centerLeft,
+                                  child: GestureDetector(
+                                    child: Text(
+                                      'Aide',
+                                      style: TextStyle(
+                                          fontFamily: 'Cream',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         SizedBox(

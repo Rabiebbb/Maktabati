@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:bazar/pages/Categories.dart';
 import 'package:bazar/pages/CreateAccount.dart';
 import 'package:bazar/pages/Exemplaires.dart';
@@ -12,8 +13,10 @@ import 'package:bazar/pages/SearchPage.dart';
 import 'package:bazar/pages/SignIn.dart';
 import 'package:bazar/pages/welcome3.dart';
 import 'package:bazar/pages/welcoome2.dart';
-import 'package:flutter/material.dart';
+import 'package:bazar/pages/Aide.dart';
 import 'package:bazar/pages/welcome.dart';
+import 'package:bazar/pages/AdminPage.dart';
+import 'package:bazar/pages/Auteur.dart';
 
 void main() {
   runApp(MyApp());
@@ -42,10 +45,12 @@ class MyApp extends StatelessWidget {
         "/SearchPage": (context) => SearchPage(),
         "/InsertNewPassword": (context) => InsertNewPassword(),
         "/Favorites": (context) => Favorites(),
-        // "/Aide": (context) => Aide(),
+        "/Aide": (context) => Aide(),
+        "/AdminPage": (context) => AdminPage(),
+        "/Auteur": (context) => Auteur()
+        // "/Commande": (context) => Commande(),
         // "UnExemplaire": ((context) => UnExemplaire()),
         // "/Proposition": (context) => Proposition(),
-        // "/AdminPages": (context) => AdminPages(),
         // "VendeurPage": (context) => VendeurPage(),
       },
     );
