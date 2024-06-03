@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class Exemplaires extends StatefulWidget {
-  const Exemplaires({super.key});
+class AdminPageCommandes extends StatefulWidget {
+  const AdminPageCommandes({super.key});
 
   @override
-  State<Exemplaires> createState() => _ExemplairesState();
+  State<AdminPageCommandes> createState() => _AdminPageCommandesState();
 }
 
-class _ExemplairesState extends State<Exemplaires> {
+class _AdminPageCommandesState extends State<AdminPageCommandes> {
   Map<dynamic, dynamic> details = {
     'name': 'book',
     'prix': 1000.toString(),
-    'isbn': '123',
-    'photo': 'photo',
-    'etat': '6',
+    'date': '12/5/2024',
+    'heure': '12:00',
+    'etat': '2',
   };
 
   @override
@@ -45,7 +45,7 @@ class _ExemplairesState extends State<Exemplaires> {
 
 Widget element(BuildContext context, Map<dynamic, dynamic> details) {
   return GestureDetector(
-    onTap: () => Navigator.pushNamed(context, "/UnExemplaire"),
+    // onTap: () => Navigator.pushNamed(context, "/"),
     child: Container(
       height: 100,
       margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -61,7 +61,7 @@ Widget element(BuildContext context, Map<dynamic, dynamic> details) {
       child: Row(
         children: [
           Icon(
-            Icons.book,
+            Icons.request_page_outlined,
             size: 80,
           ),
           SizedBox(width: 10),
@@ -78,7 +78,7 @@ Widget element(BuildContext context, Map<dynamic, dynamic> details) {
                     alignment: Alignment.centerLeft,
                     // color: Colors.green,
                     child: Text(
-                      'Etat: ' + details['etat'],
+                      'Nbr Exemplaires: ' + details['etat'],
                       style: TextStyle(
                         fontFamily: 'Rale',
                         fontSize: 18,
@@ -102,7 +102,23 @@ Widget element(BuildContext context, Map<dynamic, dynamic> details) {
               ),
             ),
           ),
-          Icon(Icons.arrow_forward),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 18, 0, 12),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  'Valider',
+                  style: TextStyle(
+                    fontFamily: 'Rale',
+                    fontSize: 15,
+                    color: Colors.green,
+                  ),
+                ),
+                Icon(Icons.double_arrow_outlined),
+              ],
+            ),
+          )
         ],
       ),
     ),

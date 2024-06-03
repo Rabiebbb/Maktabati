@@ -124,7 +124,7 @@ class _LoginScreenState extends State<SignIn> {
                   padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
                   alignment: Alignment.topLeft,
                   child: Text(
-                    'Password',
+                    'Mot de passe',
                     style: TextStyle(
                       color: Colors.black,
                       fontFamily: 'Rale',
@@ -154,10 +154,10 @@ class _LoginScreenState extends State<SignIn> {
                   ),
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 10,
                 ),
                 Container(
-                  padding: EdgeInsets.fromLTRB(50, 0, 45, 0),
+                  padding: EdgeInsets.fromLTRB(50, 0, 40, 0),
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () {
@@ -169,7 +169,7 @@ class _LoginScreenState extends State<SignIn> {
                       shadowColor: const Color.fromARGB(0, 255, 255, 255),
                     ),
                     child: Text(
-                      'Forgot Password?',
+                      'Mot de passe oublié?',
                       style: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Rale',
@@ -224,27 +224,12 @@ class _LoginScreenState extends State<SignIn> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Container(
-                          // padding: EdgeInsets.fromLTRB(37, 0, 45, 0),
-                          // alignment: Alignment.center,
-                          child: TextButton(
-                            onPressed: () => null,
-                            style: TextButton.styleFrom(
-                              foregroundColor:
-                                  const Color.fromARGB(0, 255, 255, 255),
-                              backgroundColor:
-                                  const Color.fromARGB(0, 255, 255, 255),
-                              shadowColor:
-                                  const Color.fromARGB(0, 255, 255, 255),
-                            ),
-                            child: Text(
-                              "Vous n'avez pas de compte?",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontFamily: 'Rale',
-                                fontSize: 15,
-                              ),
-                            ),
+                        Text(
+                          "Vous n'avez pas de compte?",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Rale',
+                            fontSize: 15,
                           ),
                         ),
                         Container(

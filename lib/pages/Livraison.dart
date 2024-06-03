@@ -9,13 +9,10 @@ class Livraison extends StatefulWidget {
 }
 
 class _LivraisonState extends State<Livraison> {
-  final List<String> _dropdownItems = ['Item 1', 'Item 2', 'Item 3'];
-  String? _selectedItem;
-
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
-      initialChildSize: 0.7,
+      initialChildSize: 0.5,
       minChildSize: 0.5,
       maxChildSize: 0.9,
       builder: (_, controller) => Container(
@@ -59,32 +56,37 @@ class _LivraisonState extends State<Livraison> {
                     ButtonRow(),
                   ],
                 ),
-                SizedBox(height: 60),
-                Text(
-                  'Adresse',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18.0,
-                    fontFamily: 'Rale',
-                  ),
-                ),
-                SizedBox(height: 30),
+                SizedBox(height: 80),
                 Container(
-                  child: DropdownButton(
-                    hint: Text('Select an item'),
-                    items: _dropdownItems.map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (String? newValue) {
-                      setState(() {
-                        _selectedItem = newValue;
-                      });
-                    },
-                    value: _selectedItem,
-                    icon: const Icon(Icons.keyboard_arrow_down),
+                  margin: EdgeInsets.fromLTRB(45, 0, 45, 0),
+                  width: 40,
+                  height: 50,
+                  child: Center(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        null;
+                      },
+                      child: Text(
+                        'Confirmer',
+                        style: TextStyle(
+                          fontFamily: "Rale",
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.w700,
+                          fontSize: 20,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.transparent,
+                        elevation: 0,
+                        fixedSize: Size(500, 70),
+                        shadowColor: Colors.transparent,
+                        animationDuration: Duration(milliseconds: 100),
+                      ),
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.green,
                   ),
                 ),
               ],

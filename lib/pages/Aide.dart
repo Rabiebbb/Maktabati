@@ -31,12 +31,12 @@ class Aide extends StatelessWidget {
                             'Centre d\'aide',
                             style: TextStyle(
                                 fontFamily: 'Cream',
-                                fontSize: 26,
+                                fontSize: 29,
                                 color: Colors.white),
                           ),
                         ),
                         SizedBox(
-                          height: 90,
+                          height: 40,
                         ),
                         Container(
                           width: 300,

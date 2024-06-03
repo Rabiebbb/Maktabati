@@ -12,14 +12,14 @@ class Panier extends StatefulWidget {
 class _PanierState extends State<Panier> {
   List<Map<dynamic, dynamic>> details = [
     {
-      'name': 'Le price d\'Espagne',
+      'name': 'Le prince d\'Espagne',
       'prix': "1000.00",
       'isbn': '123',
       'photo': 'photo',
       'etat': '6',
     },
     {
-      'name': 'Le price d\'Espagne',
+      'name': 'Le prince d\'Espagne',
       'prix': "1000.00",
       'isbn': '123',
       'photo': 'photo',
@@ -52,50 +52,55 @@ class _PanierState extends State<Panier> {
                 ),
                 SizedBox(width: 10),
                 Expanded(
-                  child: Container(
-                    height: 90,
-                    width: 200,
-                    // color: Colors.red,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(height: 4),
-                        Container(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/DeExemplaire');
+                    },
+                    child: Container(
+                      height: 90,
+                      width: 200,
+                      // color: Colors.red,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(height: 4),
+                          Container(
+                              alignment: Alignment.centerLeft,
+                              // color: Colors.green,
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'Etat: ' + details['etat'],
+                                    style: TextStyle(
+                                      fontFamily: 'Rale',
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  SizedBox(width: 20),
+                                  Text(
+                                    'Titre: ' + details['name'],
+                                    style: TextStyle(
+                                      fontFamily: 'Rale',
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ],
+                              )),
+                          SizedBox(height: 8),
+                          Container(
                             alignment: Alignment.centerLeft,
                             // color: Colors.green,
-                            child: Row(
-                              children: [
-                                Text(
-                                  'Etat: ' + details['etat'],
-                                  style: TextStyle(
-                                    fontFamily: 'Rale',
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                SizedBox(width: 20),
-                                Text(
-                                  'Titre: ' + details['name'],
-                                  style: TextStyle(
-                                    fontFamily: 'Rale',
-                                    fontSize: 16,
-                                  ),
-                                ),
-                              ],
-                            )),
-                        SizedBox(height: 8),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          // color: Colors.green,
-                          child: Text(
-                            'Prix: ' + details['prix'] + ' DZD',
-                            style: TextStyle(
-                              fontFamily: 'Rale',
-                              fontSize: 20,
-                              color: Colors.green,
+                            child: Text(
+                              'Prix: ' + details['prix'] + ' DZD',
+                              style: TextStyle(
+                                fontFamily: 'Rale',
+                                fontSize: 20,
+                                color: Colors.green,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -157,7 +162,7 @@ class _PanierState extends State<Panier> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 50),
               for (int i = 0; i < details.length; i++) booktile(details[i]),
               SizedBox(height: 20),
             ],
@@ -182,7 +187,7 @@ class _PanierState extends State<Panier> {
               );
             },
             child: Text(
-              'Commande',
+              'Commander',
               style: TextStyle(
                 fontFamily: "Rale",
                 color: Color.fromARGB(255, 255, 255, 255),

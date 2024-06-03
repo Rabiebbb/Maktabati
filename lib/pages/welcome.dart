@@ -57,7 +57,7 @@ class Welcome extends StatelessWidget {
                   ),
                   Container(
                     child: Text(
-                      'Commencez votre aventure',
+                      'Commencez Votre Aventure',
                       style: TextStyle(
                         fontFamily: 'Cream',
                         fontSize: 24,
@@ -65,7 +65,7 @@ class Welcome extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(60, 10, 60, 0),
+                    padding: EdgeInsets.fromLTRB(75, 10, 75, 0),
                     child: Text(
                       "Prêt à partir en quête d'inspiration et de connaissances ? Votre aventure commence maintenant. Allons-y !",
                       textAlign: TextAlign.center,
@@ -95,8 +95,8 @@ class Welcome extends StatelessWidget {
                     child: Center(
                       child: ElevatedButton(
                         onPressed: () {
-                          // Navigator.pushNamed(context, "/welcoome2");
-                          Navigator.pushNamed(context, "/Livraison");
+                          Navigator.pushNamed(context, "/welcoome2");
+                          // Navigator.pushNamed(context, "/AdminPage");
                         },
                         child: Text(
                           'Continuer',
@@ -168,15 +168,6 @@ class Welcome extends StatelessWidget {
                   ),
                   SizedBox(
                     height: 36,
-                  ),
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, '/welcoome2()'),
-                    child: Container(
-                      width: 250,
-                      height: 7,
-                      child: SvgPicture.asset(
-                          "assets/Welcome/first/Rectangle.svg"),
-                    ),
                   ),
                 ],
               ),

@@ -54,7 +54,7 @@ class _ScreensControlState extends State<ScreensControl> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Search',
+            label: 'Recherche',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.book),
@@ -68,6 +68,11 @@ class _ScreensControlState extends State<ScreensControl> {
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.green,
         onTap: _onItemTapped,
+        selectedLabelStyle: TextStyle(
+          fontFamily: 'Rale', // Change this to your desired font
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }

@@ -10,10 +10,10 @@ class Favorites extends StatefulWidget {
 class _FavoritesState extends State<Favorites> {
   Map<dynamic, dynamic> details = {
     'name': 'book',
-    'prix': 1000.toString(),
+    'nbr': 6.toString(),
     'isbn': '123',
     'photo': 'photo',
-    'etat': '6',
+    'titre': 'Le prince',
   };
 
   @override
@@ -78,7 +78,7 @@ Widget element(BuildContext context, Map<dynamic, dynamic> details) {
                     alignment: Alignment.centerLeft,
                     // color: Colors.green,
                     child: Text(
-                      'Etat: ' + details['etat'],
+                      'Titre: ' + details['titre'],
                       style: TextStyle(
                         fontFamily: 'Rale',
                         fontSize: 18,
@@ -90,11 +90,11 @@ Widget element(BuildContext context, Map<dynamic, dynamic> details) {
                     alignment: Alignment.centerLeft,
                     // color: Colors.green,
                     child: Text(
-                      'Prix: ' + details['prix'] + ' DZD',
+                      'Nbr Exemplaires: ' + details['nbr'],
                       style: TextStyle(
                         fontFamily: 'Rale',
-                        fontSize: 20,
-                        color: Colors.green,
+                        fontSize: 18,
+                        color: Colors.black,
                       ),
                     ),
                   ),

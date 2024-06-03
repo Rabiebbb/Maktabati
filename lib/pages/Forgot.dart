@@ -68,7 +68,7 @@ class _ForgotState extends State<Forgot> {
                   padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
                   alignment: Alignment.center,
                   child: Text(
-                    'Mot de passe oublie',
+                    'Mot de passe oublié',
                     style: TextStyle(
                       color: const Color.fromARGB(255, 60, 146, 63),
                       fontFamily: 'Rale',
@@ -130,7 +130,8 @@ class _ForgotState extends State<Forgot> {
                   height: 60,
                   child: Center(
                     child: TextButton(
-                      onPressed: () => forgotPressed(),
+                      onPressed: () =>
+                          Navigator.pushNamed(context, '/InsertNewPassword'),
                       child: Text(
                         'Soumettre',
                         style: TextStyle(

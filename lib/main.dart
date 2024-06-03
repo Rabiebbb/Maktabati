@@ -16,8 +16,13 @@ import 'package:bazar/pages/welcome3.dart';
 import 'package:bazar/pages/welcoome2.dart';
 import 'package:bazar/pages/Aide.dart';
 import 'package:bazar/pages/welcome.dart';
+import 'package:bazar/pages/AdminPageCommandes.dart';
 import 'package:bazar/pages/AdminPage.dart';
+import 'package:bazar/pages/AdminPagePropositions.dart';
+import 'package:bazar/pages/PhotoProposition.dart';
 import 'package:bazar/pages/UnExemplaire.dart';
+import 'package:bazar/pages/DeExemplaire.dart';
+import 'package:bazar/pages/Proposition.dart';
 import 'package:bazar/pages/Auteur.dart';
 
 void main() {
@@ -48,11 +53,15 @@ class MyApp extends StatelessWidget {
         "/InsertNewPassword": (context) => InsertNewPassword(),
         "/Favorites": (context) => Favorites(),
         "/Aide": (context) => Aide(),
+        "/AdminPageCommandes": (context) => AdminPageCommandes(),
         "/AdminPage": (context) => AdminPage(),
+        "/AdminPagePropositions": (context) => AdminPagePropositions(),
         "/Auteur": (context) => Auteur(),
         "/UnExemplaire": ((context) => UnExemplaire()),
+        "/DeExemplaire": ((context) => DeExemplaire()),
         "/Livraison": (context) => Livraison(),
-        // "/Proposition": (context) => Proposition(),
+        "/Proposition": (context) => Proposition(),
+        "/PhotoProposition": (context) => PhotoProposition(),
         // "VendeurPage": (context) => VendeurPage(),
       },
     );

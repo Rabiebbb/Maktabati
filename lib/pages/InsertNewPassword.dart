@@ -17,127 +17,160 @@ class _InsertNewPasswordState extends State<InsertNewPassword> {
       resizeToAvoidBottomInset: false,
       body: Stack(children: <Widget>[
         Container(
-            color: Colors.white,
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 60,
+          color: Colors.white,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 60,
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Insérer un nouveau mot de passe',
+                  style: TextStyle(
+                    color: const Color.fromARGB(255, 60, 146, 63),
+                    fontFamily: 'Rale',
+                    fontSize: 25,
                   ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    alignment: Alignment.center,
-                    child: Text(
-                      'Insérer un nouveau mot de passe',
-                      style: TextStyle(
-                        color: const Color.fromARGB(255, 60, 146, 63),
-                        fontFamily: 'Rale',
-                        fontSize: 25,
-                      ),
-                    ),
+                ),
+              ),
+              SizedBox(
+                height: 60,
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Nouveau mot de passe',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Rale',
+                    fontSize: 15,
                   ),
-                  SizedBox(
-                    height: 60,
-                  ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                    alignment: Alignment.topLeft,
-                    child: Text(
-                      'Nouveau mot de passe',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Rale',
-                        fontSize: 15,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 50.0),
-                    child: Container(
-                      height: 50,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          suffixIcon: GestureDetector(
-                            onTap: () => setState(() {
-                              _obscureText1 = !_obscureText1;
-                            }),
-                            child: Icon(
-                              _obscureText1
-                                  ? Icons.visibility_off
-                                  : Icons.visibility,
-                            ),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
-                          ),
-                          fillColor: Colors.grey.shade100,
-                          filled: true,
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                child: Container(
+                  height: 50,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      suffixIcon: GestureDetector(
+                        onTap: () => setState(() {
+                          _obscureText1 = !_obscureText1;
+                        }),
+                        child: Icon(
+                          _obscureText1
+                              ? Icons.visibility_off
+                              : Icons.visibility,
                         ),
-                        obscureText: _obscureText1,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
+                      fillColor: Colors.grey.shade100,
+                      filled: true,
+                    ),
+                    obscureText: _obscureText1,
 
-                        // onChanged: (value) => _name = value,
-                      ),
-                    ),
+                    // onChanged: (value) => _name = value,
                   ),
-                  SizedBox(
-                    height: 35,
+                ),
+              ),
+              SizedBox(
+                height: 35,
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Confirmez',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Rale',
+                    fontSize: 15,
                   ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                    alignment: Alignment.topLeft,
-                    child: Text(
-                      'Confirmez',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Rale',
-                        fontSize: 15,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 50.0),
-                    child: Container(
-                      height: 50,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          suffixIcon: GestureDetector(
-                            onTap: () => setState(() {
-                              _obscureText2 = !_obscureText2;
-                            }),
-                            child: Icon(
-                              _obscureText2
-                                  ? Icons.visibility_off
-                                  : Icons.visibility,
-                            ),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
-                          ),
-                          fillColor: Colors.grey.shade100,
-                          filled: true,
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                child: Container(
+                  height: 50,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      suffixIcon: GestureDetector(
+                        onTap: () => setState(() {
+                          _obscureText2 = !_obscureText2;
+                        }),
+                        child: Icon(
+                          _obscureText2
+                              ? Icons.visibility_off
+                              : Icons.visibility,
                         ),
-                        obscureText: _obscureText2,
-
-                        // onChanged: (value) => _email = value,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
+                      fillColor: Colors.grey.shade100,
+                      filled: true,
+                    ),
+                    obscureText: _obscureText2,
+                    // onChanged: (value) => _email = value,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 65,
+              ),
+              Container(
+                width: 300,
+                height: 50,
+                child: Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/ScreensControl");
+                      // Navigator.pushNamed(context, "/AdminPage");
+                    },
+                    child: Text(
+                      'Continuer',
+                      style: TextStyle(
+                        fontFamily: "Rale",
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
                       ),
                     ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      elevation: 0,
+                      fixedSize: Size(500, 70),
+                      shadowColor: Colors.transparent,
+                      animationDuration: Duration(milliseconds: 100),
+                    ),
                   ),
-                  SizedBox(
-                    height: 25,
-                  ),
-                ])),
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.green,
+                ),
+              ),
+            ],
+          ),
+        ),
       ]),
     );
   }

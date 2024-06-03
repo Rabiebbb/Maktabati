@@ -167,50 +167,6 @@ class Profil extends StatelessWidget {
                         SizedBox(
                           height: 5,
                         ),
-                        Container(
-                          padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
-                          width: 2000,
-                          height: 80,
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 60,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 213, 255, 215),
-                                  borderRadius: BorderRadius.circular(
-                                      80.0), // Adjust the radius here
-                                ),
-                                child: Icon(
-                                  Icons.local_offer,
-                                  size: 30,
-                                  color: Colors.green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Container(
-                                // color: Colors.green.shade200,
-                                // width: 115,
-                                alignment: Alignment.centerLeft,
-                                child: GestureDetector(
-                                  child: Text(
-                                    'Offres et promotions',
-                                    style: TextStyle(
-                                        fontFamily: 'Cream',
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
                         GestureDetector(
                           onTap: () =>
                               Navigator.pushNamed(context, '/Favorites'),
@@ -254,50 +210,6 @@ class Profil extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Container(
-                          padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
-                          width: 2000,
-                          height: 80,
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 60,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 213, 255, 215),
-                                  borderRadius: BorderRadius.circular(
-                                      80.0), // Adjust the radius here
-                                ),
-                                child: Icon(
-                                  Icons.book,
-                                  size: 30,
-                                  color: Colors.green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Container(
-                                // color: Colors.green.shade200,
-                                // width: 115,
-                                alignment: Alignment.centerLeft,
-                                child: GestureDetector(
-                                  child: Text(
-                                    'Historique des commandes',
-                                    style: TextStyle(
-                                        fontFamily: 'Cream',
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black),
-                                  ),
-                                ),
-                              ),
-                            ],
                           ),
                         ),
                         SizedBox(
@@ -350,45 +262,49 @@ class Profil extends StatelessWidget {
                         SizedBox(
                           height: 5,
                         ),
-                        Container(
-                          padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
-                          width: 2000,
-                          height: 80,
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 60,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 213, 255, 215),
-                                  borderRadius: BorderRadius.circular(
-                                      80.0), // Adjust the radius here
-                                ),
-                                child: Icon(
-                                  Icons.offline_share_rounded,
-                                  size: 30,
-                                  color: Colors.green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Container(
-                                // color: Colors.green.shade200,
-                                // width: 115,
-                                alignment: Alignment.centerLeft,
-                                child: GestureDetector(
-                                  child: Text(
-                                    'Proposer un livre',
-                                    style: TextStyle(
-                                        fontFamily: 'Cream',
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black),
+                        GestureDetector(
+                          onTap: () =>
+                              Navigator.pushNamed(context, '/Proposition'),
+                          child: Container(
+                            padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
+                            width: 2000,
+                            height: 80,
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 213, 255, 215),
+                                    borderRadius: BorderRadius.circular(
+                                        80.0), // Adjust the radius here
+                                  ),
+                                  child: Icon(
+                                    Icons.offline_share_rounded,
+                                    size: 30,
+                                    color: Colors.green,
                                   ),
                                 ),
-                              ),
-                            ],
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Container(
+                                  // color: Colors.green.shade200,
+                                  // width: 115,
+                                  alignment: Alignment.centerLeft,
+                                  child: GestureDetector(
+                                    child: Text(
+                                      'Proposer un livre',
+                                      style: TextStyle(
+                                          fontFamily: 'Cream',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
